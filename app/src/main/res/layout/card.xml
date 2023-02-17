@@ -10,6 +10,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_margin="20dp"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -23,12 +24,15 @@
                 android:id="@+id/newsAuthor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@+id/newsImage"
                 />
 
             <TextView
                 android:id="@+id/newsTitle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_below="@+id/newsTitle"
+                />
 
         </androidx.cardview.widget.CardView>
 
