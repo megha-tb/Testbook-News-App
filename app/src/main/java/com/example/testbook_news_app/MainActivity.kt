@@ -13,14 +13,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
 
-        replaceFragment(MainFragment())
+        replaceFragment()
     }
 
-    private fun replaceFragment(fragment : Fragment) {
+    private fun replaceFragment() {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainerView, fragment)
+        fragmentTransaction.replace(R.id.fragmentContainerView, MainFragment.newInstance())
         fragmentTransaction.commitNow()
 
     }
