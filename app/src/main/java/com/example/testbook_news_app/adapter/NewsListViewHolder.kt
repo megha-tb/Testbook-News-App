@@ -1,16 +1,20 @@
 package com.example.testbook_news_app.adapter
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.testbook_news_app.MainActivity2
 import com.example.testbook_news_app.R
 import com.example.testbook_news_app.databinding.CardBinding
-//import com.bumptech.glide.annotation.GlideModule
-//import com.bumptech.glide.module.AppGlideModule
-//import kotlin.Result
+import com.example.testbook_news_app.model.Result
+
 
 class NewsListViewHolder(val binding: CardBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -33,8 +37,21 @@ class NewsListViewHolder(val binding: CardBinding) : RecyclerView.ViewHolder(bin
 
         binding.newsAuthor.text = author
         binding.newsTitle.text = title
-
         Glide.with(photo).load(news.urlToImage).into(photo)
+
+        binding.root.setOnClickListener {
+            val intent = Intent(binding.root.context, MainActivity2::class.java)
+
+            val displayNews = Bundle()
+            displayNews.putString("image", news.urlToImage)
+            displayNews.putString("title", news.title)
+            displayNews.putString("publishedAt", news.publishedAt)
+            displayNews.putString("description", news.description)
+
+            intent.putExtra(MainActivity2.news_EXTRA , displayNews)
+
+            binding.root.context.startActivity(intent)
+        }
 
     }
 }
