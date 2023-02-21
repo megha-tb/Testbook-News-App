@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testbook_news_app.R
 import com.example.testbook_news_app.databinding.CardBinding
-import com.bumptech.glide.annotation.GlideModule
-import com.bumptech.glide.module.AppGlideModule
-import kotlin.Result
+//import com.bumptech.glide.annotation.GlideModule
+//import com.bumptech.glide.module.AppGlideModule
+//import kotlin.Result
 
 class NewsListViewHolder(val binding: CardBinding) : RecyclerView.ViewHolder(binding.root) {
 

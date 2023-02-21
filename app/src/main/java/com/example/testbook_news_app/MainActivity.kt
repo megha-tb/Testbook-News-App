@@ -2,7 +2,7 @@ package com.example.testbook_news_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+//import androidx.fragment.app.Fragment
 import com.example.testbook_news_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
