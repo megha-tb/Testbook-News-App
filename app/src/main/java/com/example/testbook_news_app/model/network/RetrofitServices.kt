@@ -5,7 +5,7 @@ import retrofit2.http.Query
 
 interface RetrofitServices {
 
-    @GET("now_playing")
-    suspend fun getNews(@Query("apiKey") key1: String, @Query("q") key2: String): NewsModel
+    @GET("v2/top-headlines")
+    suspend fun getNews(@Query("apiKey") key1: String, @Query("country") key2: String): NewsModel
 
 }

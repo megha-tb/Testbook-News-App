@@ -36,7 +36,5 @@ class NewsListViewHolder(val binding: CardBinding) : RecyclerView.ViewHolder(bin
 
         Glide.with(photo).load(news.urlToImage).into(photo)
 
-
-
     }
 }

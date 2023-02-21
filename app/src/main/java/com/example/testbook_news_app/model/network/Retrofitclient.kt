@@ -7,7 +7,7 @@ public class RetrofitClient {
 
     public fun getInstance() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://newsapi.org/docs/endpoints/everything/")
+            .baseUrl("https://newsapi.org/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

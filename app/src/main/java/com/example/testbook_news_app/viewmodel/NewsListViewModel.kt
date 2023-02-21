@@ -1,5 +1,6 @@
 package com.example.testbook_news_app.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -17,6 +18,8 @@ class NewsListViewModel : ViewModel() {
             try {
                 println("viewmodel")
                 val response = newsRepo.fetchNewsData()
+                Log.d("response", response.toString()
+                )
                 if (response != null) {
                     onGetNewsListResponseSuccess(response)
                     println(newsList)
@@ -28,6 +31,6 @@ class NewsListViewModel : ViewModel() {
     }
 
     fun onGetNewsListResponseSuccess(response: NewsModel) {
-        newsList.value = response.results
+        newsList.value = response.articles
     }
 }
