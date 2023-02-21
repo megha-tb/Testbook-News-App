@@ -7,4 +7,5 @@ class Result(
     val urlToImage: String,
     val author: String,
     val title: String,
+    val description: String
 )
